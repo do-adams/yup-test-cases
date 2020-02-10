@@ -16,8 +16,14 @@ function checkStringValidity(title, schema) {
 const defaultSchema = yup.string();
 checkStringValidity('Default Schema', defaultSchema);
 
+// Default schema property validation method
 const notRequiredSchema = yup.string().notRequired();
 checkStringValidity('Not Required Schema', notRequiredSchema);
 
+// Most strict schema property validation method
 const requiredSchema = yup.string().required();
 checkStringValidity('Required Schema', requiredSchema);
+
+// Most relaxed schema property validation method
+const nullableSchema = yup.string().nullable();
+checkStringValidity('Nullable Schema', nullableSchema);
